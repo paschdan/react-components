@@ -1,7 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 
-const Greetings = (props) =>
+export const Greetings = (props) =>
   (
     <h1>{props.greetWord} {props.greetTo}</h1>
   );
@@ -11,4 +12,12 @@ Greetings.propTypes = {
   greetTo: PropTypes.string.isRequired
 };
 
-export default Greetings
+const mapStateToProps = state => {
+  return {
+    greetTo: state.greetTo
+  }
+};
+
+const GreetingsContainer = connect(mapStateToProps, null)(Greetings);
+
+export default GreetingsContainer
