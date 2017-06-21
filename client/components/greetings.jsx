@@ -3,11 +3,12 @@ import PropTypes from 'prop-types'
 
 const Greetings = (props) =>
   (
-    <h1>{props.text}</h1>
+    <h1>{props.greetWord} {props.greetTo}</h1>
   );
 
 Greetings.propTypes = {
-  text: PropTypes.string.isRequired
+  greetWord: PropTypes.string.isRequired,
+  greetTo: PropTypes.string.isRequired
 };
 
 export default Greetings
