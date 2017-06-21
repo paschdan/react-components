@@ -4,7 +4,7 @@ import Greetings from './greetings.jsx'
 const App = () =>
   (
     <div style={{ textAlign: 'center' }}>
-      <Greetings/>
+      <Greetings text="Hello Props"/>
     </div>
   );
 
